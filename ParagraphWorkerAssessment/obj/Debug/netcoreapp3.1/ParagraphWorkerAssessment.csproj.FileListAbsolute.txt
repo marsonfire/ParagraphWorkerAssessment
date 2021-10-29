@@ -1,0 +1,13 @@
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Debug\netcoreapp3.1\ParagraphWorkerAssessment.exe
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Debug\netcoreapp3.1\ParagraphWorkerAssessment.deps.json
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Debug\netcoreapp3.1\ParagraphWorkerAssessment.runtimeconfig.json
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Debug\netcoreapp3.1\ParagraphWorkerAssessment.runtimeconfig.dev.json
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Debug\netcoreapp3.1\ParagraphWorkerAssessment.dll
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Debug\netcoreapp3.1\ParagraphWorkerAssessment.pdb
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.csprojAssemblyReference.cache
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.AssemblyInfoInputs.cache
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.AssemblyInfo.cs
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.csproj.CoreCompileInputs.cache
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.dll
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.pdb
+C:\Users\awmar\Desktop\ParagraphWorkerAssessment\ParagraphWorkerAssessment\obj\Debug\netcoreapp3.1\ParagraphWorkerAssessment.genruntimeconfig.cache
