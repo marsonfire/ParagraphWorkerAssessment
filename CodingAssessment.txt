@@ -6,5 +6,4 @@ Give the number of palindrome sentences
 List the unique words of a paragraph with the count of the word instance
 Let the user also input a letter at some point and list all words containing that letter
 
- 
 Write up a short documentation explaining what your program does.

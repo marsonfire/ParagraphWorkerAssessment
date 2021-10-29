@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ParagraphWorkerAssessment
 {
@@ -6,8 +7,9 @@ namespace ParagraphWorkerAssessment
     {
 
         #region Solution Methods 
+        
         //Count the number of palindrome words
-        public string CountPalindromeWords(string input)
+        public List<string> CountPalindromeWords(string input)
         {
             List<string> palindromesList = new List<string>();
 
@@ -23,24 +25,11 @@ namespace ParagraphWorkerAssessment
                 }
             }
 
-            //return the results
-            if(palindromesList.Count > 0)
-            {
-                string results = "Found " + palindromesList.Count + " palindrome word(s), and they are: ";
-                foreach(var palindrome in palindromesList)
-                {
-                    results += "\n" + palindrome; 
-                }
-                return results;
-            }
-            else
-            {
-                return "No palindrome words found in the input."; 
-            }
+            return palindromesList;
         }
 
         //Count the number of palindrome sentences
-        public string CountPalindromeSentences(string input)
+        public List<string> CountPalindromeSentences(string input)
         {
             List<string> palindromesList = new List<string>();
 
@@ -54,28 +43,62 @@ namespace ParagraphWorkerAssessment
                     palindromesList.Add(sentence);
                 }
             }
-
-             //return our results
-            if(palindromesList.Count > 0)
-            {
-                string results = "Found " + palindromesList.Count + " palindrome sentence(s), and they are: ";
-                foreach(var palindrome in palindromesList)
-                {
-                    results += "\n" + palindrome; 
-                }
-                return results;
-            }
-            else
-            {
-                return "No palindrome sentences found in the input."; 
-            }
+            return palindromesList;
         }
 
         //Lists the unique words in a paragraph and count how many times they're given
-        public string ListUniqueWordsInParagraph(string input)
+        public Dictionary<string, int> ListUniqueWordsInParagraph(string input)
         {
-            return "";
+            //We want to keep the spaces so we can keep the words separate
+            var cleanedUpInput = CleanUpString(input, false);
+
+            //Split up the string, get the unique words in a list
+            string[] splitInput = cleanedUpInput.Split(" ");
+            List<string> uniqueWords = splitInput.Distinct().ToList();
+
+            //Dictionary that will keep track of the word and how many times it shows up
+            Dictionary<string, int> uniqueWordCounts = new Dictionary<string, int>();
+
+            //Loop through each of the unique words, then loop through the whole array of the paragraph, 
+            //counting how many times the word shows up as we go through each unique word.
+            foreach(var word in uniqueWords)
+            {
+                int instances = 0;
+                for(int splitIndex = 0; splitIndex < splitInput.Length; splitIndex++)
+                {
+                    if(word.Equals(splitInput[splitIndex]))
+                    {
+                        instances++;
+                    }
+                }
+                uniqueWordCounts.Add(word, instances);
+            }
+
+            return uniqueWordCounts;
         }
+        
+        //Given a letter, find all words in the input paragraph that contain that letter
+        public List<string> FindWordsContainingLetter(string input, string letter)
+        {
+            //get our input cleaned up and split it into words so we can search for the letter
+            var cleanedUpInput = CleanUpString(input, false);
+            string[] splitInput = cleanedUpInput.Split(" ");
+            List<string> uniqueWords = splitInput.Distinct().ToList();
+
+            List<string> wordsContainingLetter = new List<string>();
+
+            //loop through the unique words and see which ones contain the letter we're looking for
+            foreach(var word in uniqueWords)
+            {
+                if(word.Contains(letter))
+                {
+                    wordsContainingLetter.Add(word);
+                }
+            }
+
+            return wordsContainingLetter;
+        }
+
         #endregion
 
         #region Helper Methods
@@ -115,11 +138,20 @@ namespace ParagraphWorkerAssessment
             return reverseWord; 
         }
 
-        //clean up the input and remove extra chars we don't want to interfere 
-        string CleanUpString(string input)
+        //Clean up the input and remove extra chars we don't want to interfere 
+        //Has a flag to remove spaces from the string - does this by default
+        string CleanUpString(string input, bool removeSpaces=true)
         {
             var cleanedUp = input.ToLower();
-            var charsToRemove = new string[] {",", "'", "\"", ".", "!", "?", " "};
+            string[] charsToRemove; 
+            if(removeSpaces)
+            {
+                charsToRemove = new string[] {",", "'", "\"", ".", "!", "?", " "};
+            }
+            else
+            {
+                charsToRemove = new string[] {",", "'", "\"", ".", "!", "?"};
+            }
             foreach(var character in charsToRemove)
             {
                 cleanedUp = cleanedUp.Replace(character, "");
