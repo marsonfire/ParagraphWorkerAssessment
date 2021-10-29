@@ -1,0 +1,7 @@
+First way to run the program:
+1. Navigate to ...\ParagraphWorkerAssessment\ParagraphWorkerAssessment in the command line. 
+2. Type in 'dotnet run' and the program will open up with the prompt for the paragraph.
+
+Second way to run the program:
+1. Navigate to ...\ParagraphWorkerAssessment\ParagraphWorkerAssessment\bin\Release\netcoreapp3.1\publish and locate ParagraphWorkerAssessment.exe.
+2. Double click on ParagraphWorkerAssessment.exe and the program will open up with a prompt for the paragraph.

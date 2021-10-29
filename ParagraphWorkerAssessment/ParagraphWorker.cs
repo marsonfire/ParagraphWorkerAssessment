@@ -103,9 +103,6 @@ namespace ParagraphWorkerAssessment
 
         #region Helper Methods
 
-        #region Palindrome Helper Methods
-        //Helper methods for Palindromes
-
         //Check if a single word is a palindrome
         bool IsStringPalindrome(string inputString)
         {
@@ -169,6 +166,5 @@ namespace ParagraphWorkerAssessment
 
         #endregion
 
-        #endregion
     }
 }
